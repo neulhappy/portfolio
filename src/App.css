@@ -1,55 +1,83 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'SokchoBadaBatang';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/SokchoBadaBatang.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#App_main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 li {
   list-style: none;
 }
+
+.App {
+  text-align: center;
+  position: relative;
+}
+
 body {
-  background-color: #dbe9fa;
-  width: 1900px;
-  height: 3000px;
+  font-family: 'SokchoBadaBatang',serif;
+  background-color: #ebecf6;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
 }
+
 header {
+  width: 100%;
+  background: white;
+  opacity: 0.7;
   display: flex;
+  padding: 30px 0;
+  border-radius: 0 0 30px 30px;
 }
 
-header #gnb{
-  display: flex;
+header h1 {
+  width: 300px;
+  text-align: center;
+  transition: all 0.3s;
+}
+header h1:hover {
+  color: #9872af;
+}
 
+#gnb {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+   width: 950px;
+}
+#gnb li{
+  padding-top: 2px;
+  font-size: 2rem;
+  transition: all 0.3s;
+}
+#gnb li:hover {
+  background: #dec9ec;
+  border-radius: 50%;
+}
+
+#me {
+  width: 400px;
+  border-radius: 50%;
+  padding: 100px 0;
+}
+.txt {
+  font-size: 2rem;
+  color: #4b4b4b;
+  letter-spacing: 3px;
+  line-height: 1.7;
+  width: 1200px;
 }

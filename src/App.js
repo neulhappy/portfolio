@@ -1,4 +1,5 @@
-import logo from './logo.svg';
+import React from 'react';
+import Typewriter from 'typewriter-effect';
 import './App.css';
 
 function App() {
@@ -18,10 +19,23 @@ function App() {
 
       <main id="App_main">
         <div id="inner">
-          <div id="sec1"></div>
-          <div id="sec2"></div>
-          <div id="sec3"></div>
-          <div id="sec4"></div>
+            <div id="sec1">
+                <div className="img">
+                    <img id="me" src="/Me.JPG"/>
+                </div>
+                <div className="txt">
+                    <Typewriter
+                        options={{
+                            strings: ['안녕하세요.<br/>개발자,<br/> 김하늘입니다.', '화면을 내려주세요.<br/>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇'],
+                            autoStart: true,
+                            loop: true,
+                        }}
+                    />
+                </div>
+            </div>
+            <div id="sec2"></div>
+            <div id="sec3"></div>
+            <div id="sec4"></div>
         </div>
       </main>
 
