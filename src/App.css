@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+li {
+  list-style: none;
+}
+body {
+  background-color: #dbe9fa;
+  width: 1900px;
+  height: 3000px;
+}
+header {
+  display: flex;
+}
+
+header #gnb{
+  display: flex;
+
+}
