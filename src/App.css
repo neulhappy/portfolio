@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'SokchoBadaBatang';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/SokchoBadaBatang.woff2') format('woff2');
+  font-family: 'KBIZHanmaumGothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KBIZHanmaumGothic.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -9,10 +9,12 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
+  width: 100%;
+  letter-spacing: 1.5px;
+  line-height: 1.7;
 }
 
 #App_main {
-  display: flex;
   justify-content: center;
   min-height: 100vh;
 }
@@ -26,34 +28,44 @@ li {
 }
 
 body {
-  font-family: 'SokchoBadaBatang',serif;
+  font-family: 'KBIZHanmaumGothic',serif;
+  color: #4b4b4b;
   background-color: #ebecf6;
-  width: 100%;
-  display: flex;
   justify-content: center;
   min-height: 100vh;
   position: relative;
 }
 
-header {
+#App_header {
+  position: fixed;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   background: white;
   opacity: 0.7;
   display: flex;
-  padding: 30px 0;
+  padding: 20px 0;
   border-radius: 0 0 30px 30px;
 }
 
 header h1 {
-  width: 300px;
+  color: black;
+  width: 400px;
   text-align: center;
   transition: all 0.3s;
 }
 header h1:hover {
   color: #9872af;
 }
+#App_main {
+  min-height: 100vh; /* 뷰포트의 전체 높이를 차지 */
+  display: flex;
+  justify-content: center; /* 가로 방향으로 내용 중앙 정렬 */
+  align-items: center; /* 세로 방향으로 내용 중앙 정렬 */
+}
 
 #gnb {
+  color: black;
   display: flex;
   text-align: center;
   justify-content: space-around;
@@ -68,16 +80,108 @@ header h1:hover {
   background: #dec9ec;
   border-radius: 50%;
 }
+#sec1 {
+  height: 1000px;
+  margin-top: 300px;
+  border-bottom: 2px dotted white;
+}
+.first {
+  display: flex;
+}
 
 #me {
-  width: 400px;
+  width: 200px;
   border-radius: 50%;
-  padding: 100px 0;
+  margin-left: 200px;
+}
+#sec1 .first p {
+  margin-left: 200px;
 }
 .txt {
-  font-size: 2rem;
-  color: #4b4b4b;
-  letter-spacing: 3px;
-  line-height: 1.7;
+  font-size: 1.8rem;
+  height: 400px;
+  width: 500px;
+  padding-top: 30px;
+  text-align: left;
+  padding-left: 200px;
+}
+.img p {
+  border-bottom: 2px white dotted;
+  padding-top: 5px;
+}
+
+.second {
+  font-size: 1.3rem;
+  margin-top: 200px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  visibility: hidden;
+}
+
+.second.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+#sec2 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  visibility: hidden;
+}
+
+#sec2.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+#sec2 {
   width: 1200px;
+  height: 1000px;
+  border-bottom: 2px dotted white;
+}
+
+#sec2 h2 {
+  padding: 50px 0;
+  font-size: 2rem;
+}
+
+
+#sec2 .sec2-img .easy{
+  justify-content: center;
+  display: flex;
+}
+
+#sec2 .sec2-img .normal{
+  justify-content: center;
+  display: flex;
+}
+
+#sec2 .sec2-img .hard{
+  justify-content: center;
+  display: flex;
+}
+
+
+
+
+
+#sec2 img {
+  width: 150px;
+  height: 150px;
+  transition: all 0.3s ;
+}
+
+#sec2 img:hover {
+  width: 170px;
+  height: 170px;
+}
+
+
+#sec3 {
+  width: 1200px;
+  height: 1000px;
+  border-bottom: 2px dotted white;
 }
