@@ -4,6 +4,15 @@
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: 'PyeongChangPeace-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
 body, html {
   margin: 0;
   padding: 0;
@@ -286,13 +295,42 @@ header h1:hover {
 #sec1 .home {
   top: 100px;
   position: absolute;
-  left: 400px;
-  font-size: 2.5rem;
+  left: 220px;
+  font-size: 2.8rem;
   height: 300px;
-  width: 400px;
+  width: 700px;
   font-weight: 600;
+  font-family: 'PyeongChangPeace-Bold',serif;
 }
 
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  25%, 75% { opacity: 0.7; }
+}
+
+#sec1 .bg, #sec1 .bg2 {
+  animation: fadeInOut 10s ease-in-out infinite;
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+#sec1 .bg {
+  width: 200px;
+  height: 200px;
+  top: -30%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+#sec1 .bg2 {
+  width: 100px;
+  height: 100px;
+  top: 30%;
+  left: 75%;
+  animation-delay: 0s;
+}
 
 #sec1 h2 {
   text-align: left;
@@ -353,6 +391,15 @@ header h1:hover {
   padding: 0 5px;
 }
 
+.major {
+  font-weight: bold;
+  background: white;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0 5px;
+  height: 30px;
+}
+
 .intro {
   padding-top: 25px;
 }
@@ -406,14 +453,14 @@ header h1:hover {
 
 #sec2 h2 {
   text-align: left;
-  padding: 50px 0 30px 190px;
-  font-size: 2.2rem;
+  padding: 30px 0 0 190px;
+  font-size: 3.2rem;
 }
 
 #sec2 h3 {
   text-align: left;
   padding: 0 0 0 190px;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 #sec2 .title {
@@ -440,6 +487,7 @@ header h1:hover {
   justify-content: left;
   display: flex;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 #sec2 .easy div {

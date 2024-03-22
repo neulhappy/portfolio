@@ -6,6 +6,7 @@ function App() {
     const [showMe, setShowMe] = useState(false);
     const [showSkills, setShowSkills] = useState(false);
 
+
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
@@ -17,7 +18,6 @@ function App() {
         };
 
         window.addEventListener('scroll', handleScroll);
-
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
@@ -40,6 +40,8 @@ function App() {
                 <div id="sec1">
                     <div className="home">
                         <div className="event">
+                            <div className="bg"></div>
+                            <div className="bg2"></div>
                             <div className="cloud6"></div>
                             <div className="bubble1"></div>
                             <div className="bubble2"></div>
@@ -80,6 +82,7 @@ function App() {
                                 <div>
                                     <p className="phone">101-7529-9281</p>
                                     <p className="email">is2eula@naver.com</p>
+                                    <p className="major">부산가톨릭대 간호학과</p>
                                 </div>
                                 <p className="intro">끊임없이 발전을 즐기는 프론트앤드 개발자 김하늘입니다.</p>
                             </div>
@@ -101,7 +104,7 @@ function App() {
                     <h2>Skills</h2>
                     <div className="sec2-img">
                         <h3>Language/Framework/Library</h3>
-                        <p className="title">편해요</p>
+                        <p className="title">편해요👍</p>
                         <div className="easy">
                             <div><img src="/html.png"/><p>HTML5</p></div>
                             <div><img src="/css.png"/><p>CSS3</p></div>
@@ -109,14 +112,14 @@ function App() {
                             <div><img src="/bootstrap.png"/><p>Bootstrap</p></div>
                             <div><img src="/react.png"/><p>React.js</p></div>
                         </div>
-                        <p className="title">사용할줄 알아요</p>
+                        <p className="title">사용할줄 알아요👌</p>
                         <div className="normal">
                             <div><img src="/oracle.png"/><p>Oracle</p></div>
                             <div><img src="/mariadb.png"/><p>MariaDB</p></div>
                             <div><img src="/markdown.png"/><p>Markdown</p></div>
                             <div><img src="/git.png"/><p>Git</p></div>
                         </div>
-                        <p className="title">사용 해봤습니다</p>
+                        <p className="title">사용 해봤습니다✍</p>
                         <div className="hard">
                             <div><img src="/java.png"/><p>Java</p></div>
                             <div><img src="/jsp.png"/><p>JSP</p></div>
@@ -125,7 +128,7 @@ function App() {
                             <div><img src="/spring.png"/><p>Spring</p></div>
                         </div>
                         <h3>Tools</h3>
-                        <p className="title">편해요</p>
+                        <p className="title">편해요👍</p>
                         <div className="tools">
                             <div><img src="/figma.png"/><p>figma</p></div>
                             <div><img src="/notion.png"/><p>Notion</p></div>
@@ -134,7 +137,7 @@ function App() {
                             <div><img src="/dbever.png"/><p>DBever</p></div>
 
                         </div>
-                        <p className="title">사용해봤습어요</p>
+                        <p className="title">사용해봤습니다✍</p>
                         <div className="tools">
                             <div><img src="/android.png"/><p>Android Studio</p></div>
                         </div>
