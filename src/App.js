@@ -1,11 +1,80 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Typewriter from 'typewriter-effect';
+import emailjs from 'emailjs-com';
 import './App.css';
 
+
+function ContactForm() {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (formData.name && formData.email && formData.message) {
+            emailjs.sendForm('service_mnu0zoh', 'template_l0rrhyw', e.target, '1Jf3_0HvKGY2fJfWM')
+                .then((result) => {
+                    toast.success("메일을 보내는데 성공했습니다!");
+                }, (error) => {
+                    toast.error("메일을 보내는데 실패했습니다..");
+                });
+        } else {
+            toast.error("내용을 입력해주세요.");
+        }
+    };
+
+    return (
+        <div id="sec4">
+            <h2>Contact</h2>
+            <form onSubmit={handleSubmit}>
+                <div>
+                    <label>
+                        Name
+                        <input type="text" name="name" value={formData.name} onChange={handleChange} />
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" name="email" value={formData.email} onChange={handleChange} />
+                    </label>
+                    <label>
+                        Message
+                        <textarea name="message" value={formData.message} onChange={handleChange}></textarea>
+                    </label>
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+    );
+}
 function App() {
     const [showMe, setShowMe] = useState(false);
     const [showSkills, setShowSkills] = useState(false);
+    const ref = useRef(null);
+    const homeRef = useRef(null);
+    const aboutMeRef = useRef(null);
+    const skillsRef = useRef(null);
+    const projectsRef = useRef(null);
+    const contactRef = useRef(null);
 
+
+    const scrollToRef = (ref) => {
+        let offset = 0;
+        if (ref === aboutMeRef) {
+            offset = 70;
+        } else {
+            offset = -100;
+        }
+        const topPos = ref.current.offsetTop + offset;
+        window.scrollTo({ top: topPos, behavior: 'smooth' });
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -27,15 +96,15 @@ function App() {
             <h1>Haneul's Portfolio</h1>
             <nav>
                 <ul id="gnb">
-                    <li>Home</li>
-                    <li>About Me</li>
-                    <li>Skills</li>
-                    <li>Project</li>
-                    <li>contact</li>
+                    <li onClick={() => scrollToRef(homeRef)}>Home</li>
+                    <li onClick={() => scrollToRef(aboutMeRef)}>About Me</li>
+                    <li onClick={() => scrollToRef(skillsRef)}>Skills</li>
+                    <li onClick={() => scrollToRef(projectsRef)}>Project</li>
+                    <li onClick={() => scrollToRef(contactRef)}>Contact</li>
                 </ul>
             </nav>
         </header>
-        <main id="App_main">
+        <main ref={homeRef}  id="App_main">
             <div id="inner">
                 <div id="sec1">
                     <div className="home">
@@ -72,15 +141,15 @@ function App() {
                             }}
                         />
                     </div>
-                    <div className={`Me ${showMe ? 'show' : ''}`}>
+                    <div  className={`Me ${showMe ? 'show' : ''}`}>
                         <div className="img">
                             <img id="me" src="/Me.JPG"/>
-                            <div className="profile">
+                            <div ref={aboutMeRef} className="profile">
                                 <h2>About Me</h2>
                                 <p className="name">김하늘</p>
                                 <p className="birth">1996.08.29</p>
                                 <div>
-                                    <p className="phone">101-7529-9281</p>
+                                    <p className="phone">010-7529-9281</p>
                                     <p className="email">is2eula@naver.com</p>
                                     <p className="major">부산가톨릭대 간호학과</p>
                                 </div>
@@ -100,7 +169,7 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <div id="sec2" className={showSkills ? 'show' : ''}>
+                <div ref={skillsRef} id="sec2" className={showSkills ? 'show' : ''}>
                     <h2>Skills</h2>
                     <div className="sec2-img">
                         <h3>Language/Framework/Library</h3>
@@ -143,8 +212,75 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <div id="sec3"></div>
-                <div id="sec4"></div>
+                <div ref={projectsRef} id="sec3">
+                    <h2>Project</h2>
+                    <div className="project">
+                        <div className="project1">
+                            <div className="portImg">
+                                <img src="/portfolio.png"/>
+                                <p className="click"><a href="https://github.com/neulhappy/portfolio.git" target="_blank">더보기</a></p>
+                            </div>
+                            <div className="portName">
+                                <p>포트폴리오</p>
+                                <p>solo project</p>
+                            </div>
+                            <div className="portTxt">
+                                <p>프론트앤드 취업을 위해 만든 포트폴리오입니다. typewriter-effect, 스크롤 이벤트를 사용하여 페이지를 꾸몄습니다.</p>
+                                <p>stack</p>
+                                <p>React,node.js</p>
+                            </div>
+                        </div>
+                        <div className="project2">
+                            <div className="portImg">
+                                <img src="/portfolio.png"/>
+                                <p className="click"><a href="https://github.com/neulhappy/portfolio.git" target="_blank">더보기</a></p>
+                            </div>
+                            <div className="portName">
+                                <p>포트폴리오</p>
+                                <p>solo project</p>
+                            </div>
+                            <div className="portTxt">
+                                <p>프론트앤드 취업을 위해 만든 포트폴리오입니다.</p>
+                                <p>stack</p>
+                                <p>React,node.js</p>
+                            </div>
+                        </div>
+                        <div className="project3">
+                            <div className="portImg">
+                                <img src="/portfolio.png"/>
+                                <p className="click"><a href="https://github.com/neulhappy/portfolio.git" target="_blank">더보기</a></p>
+                            </div>
+                            <div className="portName">
+                                <p>포트폴리오</p>
+                                <p>solo project</p>
+                            </div>
+                            <div className="portTxt">
+                                <p>프론트앤드 취업을 위해 만든 포트폴리오입니다.</p>
+                                <p>stack</p>
+                                <p>React,node.js</p>
+                            </div>
+                        </div>
+                        <div className="project4">
+                            <div className="portImg">
+                                <img src="/portfolio.png"/>
+                                <p className="click"><a href="https://github.com/neulhappy/portfolio.git" target="_blank">더보기</a></p>
+                            </div>
+                            <div className="portName">
+                                <p>포트폴리오</p>
+                                <p>solo project</p>
+                            </div>
+                            <div className="portTxt">
+                                <p>프론트앤드 취업을 위해 만든 포트폴리오입니다.</p>
+                                <p>stack</p>
+                                <p>React,node.js</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div ref={contactRef} id="sec4">
+                    <ContactForm />
+                    <ToastContainer />
+                </div>
             </div>
         </main>
 
@@ -156,5 +292,6 @@ function App() {
     </div>
     );
 }
+
 
 export default App;
