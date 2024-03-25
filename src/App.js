@@ -3,6 +3,9 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Typewriter from 'typewriter-effect';
 import emailjs from 'emailjs-com';
+import { css } from 'styled-components';
+import styled from 'styled-components';
+import media from './media';
 import './App.css';
 
 
@@ -22,7 +25,7 @@ function ContactForm() {
         if (formData.name && formData.email && formData.message) {
             emailjs.sendForm('service_mnu0zoh', 'template_l0rrhyw', e.target, '1Jf3_0HvKGY2fJfWM')
                 .then((result) => {
-                    toast.success("메일을 보내는데 성공했습니다!");
+                    toast.success("메일을 보냈습니다!");
                 }, (error) => {
                     toast.error("메일을 보내는데 실패했습니다..");
                 });
@@ -225,6 +228,7 @@ function App() {
                                 <p>solo project</p>
                             </div>
                             <div className="portTxt">
+                                <p>2024.03.20 ~ ing</p>
                                 <p>프론트앤드 취업을 위해 만든 포트폴리오입니다. typewriter-effect, 스크롤 이벤트를 사용하여 페이지를 꾸몄습니다.</p>
                                 <p>stack</p>
                                 <p>React,node.js</p>
@@ -232,47 +236,34 @@ function App() {
                         </div>
                         <div className="project2">
                             <div className="portImg">
-                                <img src="/portfolio.png"/>
-                                <p className="click"><a href="https://github.com/neulhappy/portfolio.git" target="_blank">더보기</a></p>
+                                <img src="/project2.png"/>
+                                <p className="click"><a href="https://github.com/neulhappy/breadGame.git" target="_blank">더보기</a></p>
                             </div>
                             <div className="portName">
-                                <p>포트폴리오</p>
+                                <p>빵이름맞추기</p>
                                 <p>solo project</p>
                             </div>
                             <div className="portTxt">
-                                <p>프론트앤드 취업을 위해 만든 포트폴리오입니다.</p>
+                                <p>2024.03.06 ~ ing</p>
+                                <p>간단한 빵이름 맞추기 게임입니다. 사진을 보고 글자 수에 맞는 빵이름을 입력하면 빵이름이 나타나는 게임입니다.</p>
                                 <p>stack</p>
                                 <p>React,node.js</p>
                             </div>
                         </div>
                         <div className="project3">
                             <div className="portImg">
-                                <img src="/portfolio.png"/>
-                                <p className="click"><a href="https://github.com/neulhappy/portfolio.git" target="_blank">더보기</a></p>
+                                <img src="/project3.png"/>
+                                <p className="click"><a href="https://github.com/Sonnet-Songbird/night-factory.git" target="_blank">더보기</a></p>
                             </div>
                             <div className="portName">
-                                <p>포트폴리오</p>
-                                <p>solo project</p>
+                                <p>방탈출게임 예약사이트</p>
+                                <p>team project</p>
                             </div>
                             <div className="portTxt">
-                                <p>프론트앤드 취업을 위해 만든 포트폴리오입니다.</p>
+                                <p>2024.01.23 ~ ing</p>
+                                <p>공포를 주제로하는 방탈출게임 예약사이트입니다. 예약모듈(예약안내,예약하기,예약확인) 파트를 구현하였습니다.</p>
                                 <p>stack</p>
-                                <p>React,node.js</p>
-                            </div>
-                        </div>
-                        <div className="project4">
-                            <div className="portImg">
-                                <img src="/portfolio.png"/>
-                                <p className="click"><a href="https://github.com/neulhappy/portfolio.git" target="_blank">더보기</a></p>
-                            </div>
-                            <div className="portName">
-                                <p>포트폴리오</p>
-                                <p>solo project</p>
-                            </div>
-                            <div className="portTxt">
-                                <p>프론트앤드 취업을 위해 만든 포트폴리오입니다.</p>
-                                <p>stack</p>
-                                <p>React,node.js</p>
+                                <p>Java, Springboot, Hibernate ,MariaDB</p>
                             </div>
                         </div>
                     </div>
@@ -286,7 +277,12 @@ function App() {
 
         <footer id="App_footer">
             <div id="inner">
-
+                <p>
+                    Copyright 2024. 김하늘. All rights reserved.
+                </p>
+                <a href="https://github.com/neulhappy"  target="_blank">
+                    <img src="/github.png"/>
+                </a>
             </div>
         </footer>
     </div>

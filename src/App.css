@@ -621,16 +621,24 @@ header h1:hover {
 
 .portTxt {
   text-align: left;
-  padding: 10px 5px 10px 5px;
+  padding: 0 10px;
+}
+#sec3 .portTxt > p:first-child {
+  margin-top: 7px;
 }
 
+
 #sec3 .portTxt > p:nth-child(2) {
+  margin: -10px 0 20px 0;
+}
+
+#sec3 .portTxt > p:nth-child(3) {
   text-align: center;
   background-color: #dce0ec;
   height: 30px;
   width: 60px;
   border-radius: 30px;
-
+  margin: -10px 0 -10px 0;
 }
 
 #sec3 img {
@@ -718,7 +726,7 @@ form input:focus, textarea:focus {
 
 form button[type="submit"] {
   padding: 10px 20px;
-  background-color: #e8d9f1;
+  background-color: #e3e5f6;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -727,7 +735,7 @@ form button[type="submit"] {
 }
 
 form button[type="submit"]:hover {
-  background-color: #d7b2ee;
+  background-color: #c5cbf6;
 }
 
 form input[type="text"],
@@ -742,4 +750,18 @@ form button[type="submit"] {
 
 form textarea {
   height: 150px;
+}
+
+footer {
+  height: 100px;
+}
+
+footer #inner {}
+
+footer img {
+  width: 50px;
+}
+
+.Toastify__toast-container {
+  left: 520px;
 }
