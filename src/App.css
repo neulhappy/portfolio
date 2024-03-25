@@ -348,16 +348,18 @@ header h1:hover {
 }
 
 #me {
-  margin-left: -850px;
-  width: 150px;
-  height: 150px;
-  border-radius: 10% ;
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 10%;
 }
 
 .profile {
   position: absolute;
   left: 170px;
-  bottom: 30px;
+  bottom: 20px;
 }
 .profile p {
   text-align: left;
@@ -365,13 +367,14 @@ header h1:hover {
 }
 
 .name {
-  color: #9872af;
   font-weight: bold;
   font-size: 1.3rem;
+  padding: 10px 0 0 50px;
 }
 .birth {
   font-weight: bold;
   font-size: 1.1rem;
+  padding: 10px 0 0 50px;
 }
 .phone {
   font-weight: bold;
@@ -401,14 +404,14 @@ header h1:hover {
 }
 
 .intro {
-  padding-top: 25px;
+  padding: 30px 0 0 50px;
 }
 
 .profile div {
   display: flex;
   gap: 10px;
   height: 12px;
-  padding-top: 5px;
+  padding: 25px 0 5px 50px;
 }
 
 .Me {
