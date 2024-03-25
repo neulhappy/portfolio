@@ -62,7 +62,7 @@ function App() {
                         </div>
                         <Typewriter
                             options={{
-                                strings: ['HANEUL KIM<br/>Front-end' +
+                                strings: ['HANEUL KIM<br/>Front-end ' +
                                 'Developer<br/><br/><br/><span>⭣</span>'],
                                 autoStart: true,
                                 loop: true,
