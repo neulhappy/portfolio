@@ -447,7 +447,7 @@ header h1:hover {
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   visibility: hidden;
   width: 1200px;
-  height: 1000px;
+  height: 1500px;
   border-bottom: 1px solid white;
 }
 
@@ -481,56 +481,38 @@ header h1:hover {
 
 #sec2 .sec2-img .easy{
   padding-left: 190px;
-  justify-content: left;
+
+}
+
+#sec2 .skill {
   display: flex;
+
+}
+
+#sec2 .skill .content {
+  margin : 2px 0 0 5px;
 }
 
 #sec2 .sec2-img .normal{
   padding-left: 190px;
-  justify-content: left;
-  display: flex;
 }
 
 #sec2 .sec2-img .hard{
   padding-left: 190px;
-  justify-content: left;
-  display: flex;
-  align-items: center;
-  margin-bottom: 100px;
 }
 
-#sec2 .easy div {
+#sec2 .skill_name {
   background-color: white;
-  margin:0 10px 0 0;
+  margin:0 0 10px 0;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 30px;
+  width: 110px;
   padding-left: 5px;
 }
 
-#sec2 .normal div {
-  background-color: white;
-  margin:0 10px 0 0;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 30px;
-  padding-left: 5px;
-}
-
-#sec2 .hard div {
-  background-color: white;
-  margin:0 10px 0 0;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 30px;
-  padding-left: 5px;
-}
 
 #sec2 img {
   width: 20px;
@@ -539,21 +521,9 @@ header h1:hover {
 }
 
 .tools {
-  display: flex;
-  justify-content: left;
   padding-left: 190px;
 }
 
-.tools div {
-  background-color: white;
-  margin:0 10px 0 0;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 30px;
-  padding-left: 7px;
-}
 
 #sec2 p {
   padding: 0 8px 0 3px;

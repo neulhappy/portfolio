@@ -148,7 +148,7 @@ function App() {
                     </div>
                     <div  className={`Me ${showMe ? 'show' : ''}`}>
                         <div className="img">
-                            <img id="me" src="/Me.JPG"/>
+                            <img id="me" src="/Me.jpg"/>
                             <div ref={aboutMeRef} className="profile">
                                 <h2>About Me</h2>
                                 <p className="name">김하늘</p>
@@ -179,40 +179,96 @@ function App() {
                     <div className="sec2-img">
                         <h3>Language/Framework/Library</h3>
                         <p className="title">편해요👍</p>
+
                         <div className="easy">
-                            <div><img src="/html.png"/><p>HTML5</p></div>
-                            <div><img src="/css.png"/><p>CSS3</p></div>
-                            <div><img src="/js.png"/><p>JavaScript</p></div>
-                            <div><img src="/bootstrap.png"/><p>Bootstrap</p></div>
-                            <div><img src="/react.png"/><p>React.js</p></div>
+                            <div className="skill">
+                                <div className="skill_name"><img src="/html.png"/><p>HTML5</p></div>
+                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                            </div>
+                            <div className="skill">
+                                <div className="skill_name"><img src="/css.png"/><p>CSS3</p></div>
+                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                            </div>
+                            <div className="skill">
+                                <div className="skill_name"><img src="/js.png"/><p>JavaScript</p></div>
+                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                            </div>
+                            <div className="skill">
+                                <div className="skill_name"><img src="/bootstrap.png"/><p>Bootstrap</p></div>
+                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                            </div>
+                            <div className="skill">
+                                <div className="skill_name"><img src="/react.png"/><p>React.js</p></div>
+                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                            </div>
                         </div>
                         <p className="title">어느 정도 사용할 줄 알아요👌</p>
                         <div className="normal">
-                            <div><img src="/oracle.png"/><p>Oracle</p></div>
-                            <div><img src="/mariadb.png"/><p>MariaDB</p></div>
-                            <div><img src="/markdown.png"/><p>Markdown</p></div>
-                            <div><img src="/git.png"/><p>Git</p></div>
+                            <div className="skill">
+                                <div className="skill_name"><img src="/oracle.png"/><p>Oracle</p></div>  <p className="content">⁚ 뭐를 해봤습니다.</p>
+                            </div>
+                            <div className="skill">
+                                <div className="skill_name"><img src="/mariadb.png"/><p>MariaDB</p></div>
+                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                            </div>
+                            <div className="skill">
+                                <div className="skill_name"><img src="/markdown.png"/><p>Markdown</p></div>
+                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                            </div>
+                            <div className="skill">
+                                <div className="skill_name"><img src="/git.png"/><p>Git</p></div>
+                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                            </div>
                         </div>
                         <p className="title">사용해 봤습니다✍</p>
                         <div className="hard">
-                            <div><img src="/java.png"/><p>Java</p></div>
-                            <div><img src="/jsp.png"/><p>JSP</p></div>
-                            <div><img src="/kotlin.png"/><p>Kotlin</p></div>
-                            <div><img src="/python.png"/><p>Python</p></div>
-                            <div><img src="/spring.png"/><p>Spring</p></div>
+                            <div className="skill">
+                                <div className="skill_name"><img src="/java.png"/><p>Java</p></div>
+                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                            </div>
+                            <div className="skill">
+                                <div className="skill_name"><img src="/jsp.png"/><p>JSP</p></div>
+                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                            </div>
+                            <div className="skill">
+                                <div className="skill_name"><img src="/kotlin.png"/><p>Kotlin</p></div>
+                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                            </div>
+                            <div className="skill">
+                                <div className="skill_name"><img src="/python.png"/><p>Python</p></div>
+                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                            </div>
+                            <div className="skill">
+                                <div className="skill_name"><img src="/spring.png"/><p>Spring</p></div>
+                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                            </div>
                         </div>
                         <h3>Tools</h3>
                         <p className="title">편해요👍</p>
                         <div className="tools">
-                            <div><img src="/figma.png"/><p>figma</p></div>
-                            <div><img src="/notion.png"/><p>Notion</p></div>
-                            <div><img src="/intellij.png"/><p>IntelliJ</p></div>
-                            <div><img src="/vscode.png"/><p>Visual Studio</p></div>
+                            <div className="skill">
+                                <div className="skill_name"><img src="/figma.png"/><p>figma</p></div>
+                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                            </div>
+                            <div className="skill">
+                                <div className="skill_name"><img src="/notion.png"/><p>Notion</p></div>
+                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                            </div>
+                            <div className="skill">
+                                <div className="skill_name"><img src="/intellij.png"/><p>IntelliJ</p></div>
+                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                            </div>
+                            <div className="skill">
+                                <div className="skill_name"><img src="/vscode.png"/><p>VS Code</p></div>
+                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                            </div>
                         </div>
                         <p className="title">사용해 봤습니다✍</p>
                         <div className="tools">
-                            <div><img src="/android.png"/><p>Android Studio</p></div>
-                            <div><img src="/dbever.png"/><p>DBever</p></div>
+                            <div className="skill">
+                                <div className="skill_name"><img src="/dbever.png"/><p>DBever</p></div>
+                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
