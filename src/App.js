@@ -9,6 +9,8 @@ import media from './media';
 import './App.css';
 
 
+
+
 function ContactForm() {
     const [formData, setFormData] = useState({
         name: '',
@@ -82,10 +84,10 @@ function App() {
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
-            if (scrollPosition > 300) setShowMe(true); // sec1 나타남
+            if (scrollPosition > 300) setShowMe(true);
             else setShowMe(false);
 
-            if (scrollPosition > 800) setShowSkills(true); // sec2 나타남, 500은 예시값, 필요에 따라 조정
+            if (scrollPosition > 800) setShowSkills(true);
             else setShowSkills(false);
         };
 
@@ -184,14 +186,14 @@ function App() {
                             <div><img src="/bootstrap.png"/><p>Bootstrap</p></div>
                             <div><img src="/react.png"/><p>React.js</p></div>
                         </div>
-                        <p className="title">사용할줄 알아요👌</p>
+                        <p className="title">어느 정도 사용할 줄 알아요👌</p>
                         <div className="normal">
                             <div><img src="/oracle.png"/><p>Oracle</p></div>
                             <div><img src="/mariadb.png"/><p>MariaDB</p></div>
                             <div><img src="/markdown.png"/><p>Markdown</p></div>
                             <div><img src="/git.png"/><p>Git</p></div>
                         </div>
-                        <p className="title">사용 해봤습니다✍</p>
+                        <p className="title">사용해 봤습니다✍</p>
                         <div className="hard">
                             <div><img src="/java.png"/><p>Java</p></div>
                             <div><img src="/jsp.png"/><p>JSP</p></div>
@@ -206,12 +208,11 @@ function App() {
                             <div><img src="/notion.png"/><p>Notion</p></div>
                             <div><img src="/intellij.png"/><p>IntelliJ</p></div>
                             <div><img src="/vscode.png"/><p>Visual Studio</p></div>
-                            <div><img src="/dbever.png"/><p>DBever</p></div>
-
                         </div>
-                        <p className="title">사용해봤습니다✍</p>
+                        <p className="title">사용해 봤습니다✍</p>
                         <div className="tools">
                             <div><img src="/android.png"/><p>Android Studio</p></div>
+                            <div><img src="/dbever.png"/><p>DBever</p></div>
                         </div>
                     </div>
                 </div>
@@ -245,7 +246,7 @@ function App() {
                             </div>
                             <div className="portTxt">
                                 <p>2024.03.06 ~ ing</p>
-                                <p>간단한 빵이름 맞추기 게임입니다. 사진을 보고 글자 수에 맞는 빵이름을 입력하면 빵이름이 나타나는 게임입니다.</p>
+                                <p>간단한 빵 이름 맞추기 게임입니다. 사진을 보고 글자 수에 맞는 빵 이름을 입력하면 빵 이름이 나타나는 게임입니다.</p>
                                 <p>stack</p>
                                 <p>React,node.js</p>
                             </div>
@@ -261,7 +262,7 @@ function App() {
                             </div>
                             <div className="portTxt">
                                 <p>2024.01.23 ~ ing</p>
-                                <p>공포를 주제로하는 방탈출게임 예약사이트입니다. 예약모듈(예약안내,예약하기,예약확인) 파트를 구현하였습니다.</p>
+                                <p>공포를 주제로 하는 방 탈출 게임 예약사이트입니다. 예약 모듈(예약안내, 예약하기, 예약확인) 파트를 구현하였습니다.</p>
                                 <p>stack</p>
                                 <p>Java, Springboot, Hibernate ,MariaDB</p>
                             </div>
