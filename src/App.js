@@ -62,6 +62,7 @@ function ContactForm() {
 function App() {
     const [showMe, setShowMe] = useState(false);
     const [showSkills, setShowSkills] = useState(false);
+    const [showProjects, setShowProjects] = useState(false);
     const ref = useRef(null);
     const homeRef = useRef(null);
     const aboutMeRef = useRef(null);
@@ -84,11 +85,14 @@ function App() {
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
-            if (scrollPosition > 300) setShowMe(true);
+            if (scrollPosition > 400) setShowMe(true);
             else setShowMe(false);
 
-            if (scrollPosition > 800) setShowSkills(true);
+            if (scrollPosition > 1050) setShowSkills(true);
             else setShowSkills(false);
+
+            if (scrollPosition > 2550) setShowProjects(true);
+            else setShowProjects(false);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -262,14 +266,13 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <div ref={projectsRef} id="sec3">
+                <div ref={projectsRef} id="sec3" className={showProjects ? 'show' : ''}>
                     <h2>Project</h2>
                     <div className="project">
                         <div className="project1">
                             <div className="portImg">
-                                <video autoPlay loop muted>
+                                <video autoPlay loop muted className="videoSize">
                                     <source src="/portfolio.mp4" type="video/mp4" />
-                                    브라우저가 비디오 태그를 지원하지 않습니다.
                                 </video>
                                 <p className="click"><a href="https://github.com/neulhappy/portfolio.git" target="_blank">더보기</a></p>
                             </div>
@@ -286,9 +289,8 @@ function App() {
                         </div>
                         <div className="project2">
                             <div className="portImg">
-                                <video autoPlay loop muted>
-                                    <source src="/bbangname.mp4" type="video/mp4" />
-                                    브라우저가 비디오 태그를 지원하지 않습니다.
+                                <video autoPlay loop muted className="videoSize">
+                                    <source src="/bread.mp4" type="video/mp4" />
                                 </video>
                                 <p className="click"><a href="https://github.com/neulhappy/breadGame.git" target="_blank">더보기</a></p>
                             </div>
@@ -305,11 +307,10 @@ function App() {
                         </div>
                         <div className="project3">
                             <div className="portImg">
-                                <video autoPlay loop muted>
+                                <video autoPlay loop muted className="videoSize">
                                     <source src="/night-factory.mp4" type="video/mp4" />
-                                    브라우저가 비디오 태그를 지원하지 않습니다.
                                 </video>
-                                <p className="click"><a href="https://github.com/Sonnet-Songbird/night-factory.git" target="_blank">더보기</a></p>
+                                <p className="click"><a href="https://github.com/neulhappy/night-factory.git" target="_blank">더보기</a></p>
                             </div>
                             <div className="portName">
                                 <p>방탈출게임 예약사이트</p>
@@ -322,6 +323,24 @@ function App() {
                                 <p>Java, Springboot, Hibernate ,MariaDB</p>
                             </div>
                         </div>
+                    <div className="project4">
+                        <div className="portImg">
+                            <video autoPlay loop muted className="videoSize">
+                                <source src="/superhero-landing.mp4" type="video/mp4" />
+                            </video>
+                            <p className="click"><a href="https://github.com/neulhappy/superhero-landing.git" target="_blank">더보기</a></p>
+                        </div>
+                        <div className="portName">
+                            <p>슈퍼히어로 굿즈쇼핑몰</p>
+                            <p>team project</p>
+                        </div>
+                        <div className="portTxt">
+                            <p>2023.12.06 ~ 2023.12.26</p>
+                            <p>쇼핑몰, 게시판, 그리고 이용자 관리 서비스를 구현하였으며, 회원 관리 및 암호화 모듈을 구현하였습니다.</p>
+                            <p>stack</p>
+                            <p>Java, Oracle, Tomcat 10.1.16</p>
+                        </div>
+                    </div>
                     </div>
                 </div>
                 <div ref={contactRef} id="sec4">
