@@ -611,7 +611,8 @@ header h1:hover {
   margin: -10px 0 -10px 0;
 }
 
-#sec3 img {
+
+#sec3 video {
   width: 340px;
   height: 200px;
   object-fit: cover;
@@ -636,10 +637,9 @@ header h1:hover {
   visibility: visible;
   transition-delay: 0s;
 }
-.portImg:hover img {
+.portImg:hover video {
   opacity: 0.2;
 }
-
 .typewriter span{
 }
 

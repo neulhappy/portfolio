@@ -183,91 +183,81 @@ function App() {
                         <div className="easy">
                             <div className="skill">
                                 <div className="skill_name"><img src="/html.png"/><p>HTML5</p></div>
-                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                                <p className="content">⁚ 웹 표준을 지키려고 합니다.</p>
                             </div>
                             <div className="skill">
                                 <div className="skill_name"><img src="/css.png"/><p>CSS3</p></div>
-                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                                <p className="content">⁚ @keyframes를 이용하여 애니메이션 효과를 줄 수 있습니다.</p>
                             </div>
                             <div className="skill">
                                 <div className="skill_name"><img src="/js.png"/><p>JavaScript</p></div>
-                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                                <p className="content">⁚ ES6 자바스크립트 문법을 사용합니다. / 유효성 검사 및 이벤트 처리와 API를 이용하여 날짜 필터링을 해봤습니다.</p>
                             </div>
                             <div className="skill">
                                 <div className="skill_name"><img src="/bootstrap.png"/><p>Bootstrap</p></div>
-                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                                <p className="content">⁚ 부트스트랩을 이용하여 디자인을 꾸밀 수 있습니다.</p>
                             </div>
                             <div className="skill">
                                 <div className="skill_name"><img src="/react.png"/><p>React.js</p></div>
-                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                                <p className="content">⁚ 상태 관리를 할 수 있습니다. / 라이브러리를 활용하여 효과를 줄 수 있습니다.</p>
                             </div>
                         </div>
                         <p className="title">어느 정도 사용할 줄 알아요👌</p>
                         <div className="normal">
                             <div className="skill">
-                                <div className="skill_name"><img src="/oracle.png"/><p>Oracle</p></div>  <p className="content">⁚ 뭐를 해봤습니다.</p>
+                                <div className="skill_name"><img src="/oracle.png"/><p>Oracle</p></div>  <p className="content">⁚ 회원가입 및 로그인 구현 데이터를 관리한 적이 있습니다.</p>
                             </div>
                             <div className="skill">
                                 <div className="skill_name"><img src="/mariadb.png"/><p>MariaDB</p></div>
-                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                                <p className="content">⁚ 방 탈출 예약 정보 데이터를 관리한 적이 있습니다.</p>
                             </div>
                             <div className="skill">
                                 <div className="skill_name"><img src="/markdown.png"/><p>Markdown</p></div>
-                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                                <p className="content">⁚ 마크다운 문법을 이용하여 글을 작성할 수 있습니다.</p>
                             </div>
                             <div className="skill">
                                 <div className="skill_name"><img src="/git.png"/><p>Git</p></div>
-                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                                <p className="content">⁚ 협업이 가능합니다. / 프로젝트 관리를 할 수 있습니다.</p>
                             </div>
                         </div>
                         <p className="title">사용해 봤습니다✍</p>
                         <div className="hard">
                             <div className="skill">
                                 <div className="skill_name"><img src="/java.png"/><p>Java</p></div>
-                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                                <p className="content">⁚ 로그인과 회원가입을 위한 컨트롤러와 DTO, DAO를 작성해 본 적 있습니다.</p>
                             </div>
                             <div className="skill">
                                 <div className="skill_name"><img src="/jsp.png"/><p>JSP</p></div>
-                                <p className="content">⁚ 뭐를 해봤습니다.</p>
-                            </div>
-                            <div className="skill">
-                                <div className="skill_name"><img src="/kotlin.png"/><p>Kotlin</p></div>
-                                <p className="content">⁚ 뭐를 해봤습니다.</p>
-                            </div>
-                            <div className="skill">
-                                <div className="skill_name"><img src="/python.png"/><p>Python</p></div>
-                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                                <p className="content">⁚ MVC 패턴을 이용하여 게시판 CRUD를 구현해 본 적 있습니다.</p>
                             </div>
                             <div className="skill">
                                 <div className="skill_name"><img src="/spring.png"/><p>Spring</p></div>
-                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                                <p className="content">⁚ 스프링 MVC를 이용하여 블로그를 구현해 봤습니다.</p>
                             </div>
                         </div>
                         <h3>Tools</h3>
-                        <p className="title">편해요👍</p>
                         <div className="tools">
                             <div className="skill">
                                 <div className="skill_name"><img src="/figma.png"/><p>figma</p></div>
-                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                                <p className="content">⁚ 간단한 디자인이 가능하며, 피그마를 이용하여 화면 설계서를 작성해 보았습니다.</p>
                             </div>
                             <div className="skill">
                                 <div className="skill_name"><img src="/notion.png"/><p>Notion</p></div>
-                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                                <p className="content">⁚ 노션을 이용하여 일정관리 및 기록을 합니다.</p>
                             </div>
                             <div className="skill">
                                 <div className="skill_name"><img src="/intellij.png"/><p>IntelliJ</p></div>
-                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                                <p className="content">⁚ IntelliJ 이용하여 프로젝트를 만들 수 있습니다.</p>
                             </div>
                             <div className="skill">
                                 <div className="skill_name"><img src="/vscode.png"/><p>VS Code</p></div>
-                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                                <p className="content">⁚ VS Code를 이용하여 프로젝트를 만들 수 있습니다.</p>
                             </div>
                         </div>
-                        <p className="title">사용해 봤습니다✍</p>
                         <div className="tools">
                             <div className="skill">
                                 <div className="skill_name"><img src="/dbever.png"/><p>DBever</p></div>
-                                <p className="content">⁚ 뭐를 해봤습니다.</p>
+                                <p className="content">⁚ DBever를 이용하여 데이터베이스를 관리를 할 수 있습니다. </p>
                             </div>
                         </div>
                     </div>
@@ -277,7 +267,10 @@ function App() {
                     <div className="project">
                         <div className="project1">
                             <div className="portImg">
-                                <img src="/portfolio.png"/>
+                                <video autoPlay loop muted>
+                                    <source src="/portfolio.mp4" type="video/mp4" />
+                                    브라우저가 비디오 태그를 지원하지 않습니다.
+                                </video>
                                 <p className="click"><a href="https://github.com/neulhappy/portfolio.git" target="_blank">더보기</a></p>
                             </div>
                             <div className="portName">
@@ -293,7 +286,10 @@ function App() {
                         </div>
                         <div className="project2">
                             <div className="portImg">
-                                <img src="/project2.png"/>
+                                <video autoPlay loop muted>
+                                    <source src="/bbangname.mp4" type="video/mp4" />
+                                    브라우저가 비디오 태그를 지원하지 않습니다.
+                                </video>
                                 <p className="click"><a href="https://github.com/neulhappy/breadGame.git" target="_blank">더보기</a></p>
                             </div>
                             <div className="portName">
@@ -309,7 +305,10 @@ function App() {
                         </div>
                         <div className="project3">
                             <div className="portImg">
-                                <img src="/project3.png"/>
+                                <video autoPlay loop muted>
+                                    <source src="/night-factory.mp4" type="video/mp4" />
+                                    브라우저가 비디오 태그를 지원하지 않습니다.
+                                </video>
                                 <p className="click"><a href="https://github.com/Sonnet-Songbird/night-factory.git" target="_blank">더보기</a></p>
                             </div>
                             <div className="portName">
