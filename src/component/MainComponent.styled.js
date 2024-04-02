@@ -109,7 +109,9 @@ export const Section1 = styled.div`
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     visibility: hidden;
     line-height: 2;
-    margin-top: 300px;
+    width: 1200px;
+    height: 500px;
+    margin-top: -300px;
   }
   .Me.show {
     opacity: 1;

@@ -77,7 +77,7 @@ function App() {
     const scrollToRef = (ref) => {
         let offset = 0;
         if (ref === aboutMeRef) {
-            offset = 70;
+            offset = 350;
         } else {
             offset = -100;
         }
@@ -88,13 +88,13 @@ function App() {
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
-            if (scrollPosition > 400) setShowMe(true);
+            if (scrollPosition > 700) setShowMe(true);
             else setShowMe(false);
 
-            if (scrollPosition > 1050) setShowSkills(true);
+            if (scrollPosition > 1250) setShowSkills(true);
             else setShowSkills(false);
 
-            if (scrollPosition > 2550) setShowProjects(true);
+            if (scrollPosition > 2900) setShowProjects(true);
             else setShowProjects(false);
         };
 

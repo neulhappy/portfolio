@@ -29,14 +29,14 @@ export const Background = styled.div`
   .bg {
     width: 200px;
     height: 200px;
-    top: -30%;
-    left: 15%;
+    top: -18%;
+    left: 14%;
   }
 
   .bg2 {
     width: 100px;
     height: 100px;
-    top: 30%;
+    top: 18%;
     left: 75%;
   }
 `;
