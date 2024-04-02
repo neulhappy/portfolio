@@ -10,6 +10,9 @@ export const Header = styled.header`
   position: fixed;
   justify-content: center;
   border-bottom: 1px solid white;
+  top: 0;
+  left: 0;
+  right: 0;
   
   
   h1 {
@@ -41,7 +44,7 @@ export const Header = styled.header`
     border-radius: 50%;
   }
   
-  ${media.desktop`padding: 15px 0;`}
-  ${media.tablet`padding: 10px 0; background: #ddd;`}
-  ${media.mobile`padding: 5px 0; background: #ccc;`}
+  ${media.desktop``}
+  ${media.tablet``}
+  ${media.mobile``}
 `;
