@@ -15,8 +15,3 @@
 개발 환경
 ---
 + React.js, node.js(16)
-
-
-추후 개선할 점
----
-+ styled-components를 이용한 반응형 만들기
