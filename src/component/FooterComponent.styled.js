@@ -9,18 +9,15 @@ export const Footer= styled.footer `
     width: 50px;
   }
   ${media.desktop`
-    height: 1100px;
-    margin-top: 200px;
+    height: 90px;
   `}
 
   ${media.tablet`
-    height: 900px;
-    margin-top: 150px;
+    height: 70px;
   `}
 
   ${media.mobile`
-    height: 700px;
-    margin-top: 100px;
+    height: 50px;
   `}
   
 `;

@@ -416,9 +416,8 @@ export const Section4 = styled.div`
 
   form input:focus,
   textarea:focus {
-    outline: none; /* 기본 포커스 테두리 제거 */
-    border: 2px solid #cac6ce; /* 파란색 테두리 추가 */
-  }
+    outline: none;
+    border: 2px solid #cac6ce;
 
   form button[type="submit"] {
     padding: 10px 20px;
