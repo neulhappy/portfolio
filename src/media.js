@@ -1,4 +1,3 @@
-// media.js
 import { css } from 'styled-components';
 
 const sizes = {
@@ -16,4 +15,4 @@ const media = Object.keys(sizes).reduce((acc, label) => {
     return acc;
 }, {});
 
-export default media; // default export
+export default media;

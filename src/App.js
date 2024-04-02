@@ -3,12 +3,13 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Typewriter from 'typewriter-effect';
 import emailjs from 'emailjs-com';
-import { css } from 'styled-components';
 import styled from 'styled-components';
 import media from './media';
-import './App.css';
-
-
+import { GlobalStyles } from './assets/GlobalStyles.js';
+import { Section1, Section2, Section3, Section4 } from './component/MainComponent.styled.js';
+import { Header } from './component/HeaderComponent.Styled.js';
+import { Background, Bubble } from './component/BubbleComponent.styled.js';
+import { Footer } from './component/FooterComponent.styled.js';
 
 
 function ContactForm() {
@@ -59,6 +60,8 @@ function ContactForm() {
         </div>
     );
 }
+
+
 function App() {
     const [showMe, setShowMe] = useState(false);
     const [showSkills, setShowSkills] = useState(false);
@@ -101,7 +104,8 @@ function App() {
 
     return (
     <div className="App">
-        <header id="App_header">
+        <GlobalStyles />
+        <Header id="App_header">
             <h1>Haneul's Portfolio</h1>
             <nav>
                 <ul id="gnb">
@@ -112,15 +116,17 @@ function App() {
                     <li onClick={() => scrollToRef(contactRef)}>Contact</li>
                 </ul>
             </nav>
-        </header>
+        </Header>
         <main ref={homeRef}  id="App_main">
             <div id="inner">
-                <div id="sec1">
+                <Section1 id="sec1">
                     <div className="home">
                         <div className="event">
+                            <Background>
                             <div className="bg"></div>
                             <div className="bg2"></div>
-                            <div className="cloud6"></div>
+                            </Background>
+                            <Bubble>
                             <div className="bubble1"></div>
                             <div className="bubble2"></div>
                             <div className="bubble3"></div>
@@ -136,7 +142,7 @@ function App() {
                             <div className="bubble13"></div>
                             <div className="bubble14"></div>
                             <div className="bubble15"></div>
-
+                            </Bubble>
                         </div>
                         <Typewriter
                             options={{
@@ -152,7 +158,7 @@ function App() {
                     </div>
                     <div  className={`Me ${showMe ? 'show' : ''}`}>
                         <div className="img">
-                            <img id="me" src="/Me.jpg"/>
+                            <img id="me" src="/images/Me.jpg"/>
                             <div ref={aboutMeRef} className="profile">
                                 <h2>About Me</h2>
                                 <p className="name">김하늘</p>
@@ -177,8 +183,8 @@ function App() {
                             </p>
                         </div>
                     </div>
-                </div>
-                <div ref={skillsRef} id="sec2" className={showSkills ? 'show' : ''}>
+                </Section1>
+                <Section2 ref={skillsRef} id="sec2" className={showSkills ? 'show' : ''}>
                     <h2>Skills</h2>
                     <div className="sec2-img">
                         <h3>Language/Framework/Library</h3>
@@ -186,93 +192,93 @@ function App() {
 
                         <div className="easy">
                             <div className="skill">
-                                <div className="skill_name"><img src="/html.png"/><p>HTML5</p></div>
+                                <div className="skill_name"><img src="/images/html.png"/><p>HTML5</p></div>
                                 <p className="content">⁚ 웹 표준을 지키려고 합니다.</p>
                             </div>
                             <div className="skill">
-                                <div className="skill_name"><img src="/css.png"/><p>CSS3</p></div>
+                                <div className="skill_name"><img src="/images/css.png"/><p>CSS3</p></div>
                                 <p className="content">⁚ @keyframes를 이용하여 애니메이션 효과를 줄 수 있습니다.</p>
                             </div>
                             <div className="skill">
-                                <div className="skill_name"><img src="/js.png"/><p>JavaScript</p></div>
+                                <div className="skill_name"><img src="/images/js.png"/><p>JavaScript</p></div>
                                 <p className="content">⁚ ES6 자바스크립트 문법을 사용합니다. / 유효성 검사 및 이벤트 처리와 API를 이용하여 날짜 필터링을 해봤습니다.</p>
                             </div>
                             <div className="skill">
-                                <div className="skill_name"><img src="/bootstrap.png"/><p>Bootstrap</p></div>
+                                <div className="skill_name"><img src="/images/bootstrap.png"/><p>Bootstrap</p></div>
                                 <p className="content">⁚ 부트스트랩을 이용하여 디자인을 꾸밀 수 있습니다.</p>
                             </div>
                             <div className="skill">
-                                <div className="skill_name"><img src="/react.png"/><p>React.js</p></div>
+                                <div className="skill_name"><img src="/images/react.png"/><p>React.js</p></div>
                                 <p className="content">⁚ 상태 관리를 할 수 있습니다. / 라이브러리를 활용하여 효과를 줄 수 있습니다.</p>
                             </div>
                         </div>
                         <p className="title">어느 정도 사용할 줄 알아요👌</p>
                         <div className="normal">
                             <div className="skill">
-                                <div className="skill_name"><img src="/oracle.png"/><p>Oracle</p></div>  <p className="content">⁚ 회원가입 및 로그인 구현 데이터를 관리한 적이 있습니다.</p>
+                                <div className="skill_name"><img src="/images/oracle.png"/><p>Oracle</p></div>  <p className="content">⁚ 회원가입 및 로그인 구현 데이터를 관리한 적이 있습니다.</p>
                             </div>
                             <div className="skill">
-                                <div className="skill_name"><img src="/mariadb.png"/><p>MariaDB</p></div>
+                                <div className="skill_name"><img src="/images/mariadb.png"/><p>MariaDB</p></div>
                                 <p className="content">⁚ 방 탈출 예약 정보 데이터를 관리한 적이 있습니다.</p>
                             </div>
                             <div className="skill">
-                                <div className="skill_name"><img src="/markdown.png"/><p>Markdown</p></div>
+                                <div className="skill_name"><img src="/images/markdown.png"/><p>Markdown</p></div>
                                 <p className="content">⁚ 마크다운 문법을 이용하여 글을 작성할 수 있습니다.</p>
                             </div>
                             <div className="skill">
-                                <div className="skill_name"><img src="/git.png"/><p>Git</p></div>
+                                <div className="skill_name"><img src="/images/git.png"/><p>Git</p></div>
                                 <p className="content">⁚ 협업이 가능합니다. / 프로젝트 관리를 할 수 있습니다.</p>
                             </div>
                         </div>
                         <p className="title">사용해 봤습니다✍</p>
                         <div className="hard">
                             <div className="skill">
-                                <div className="skill_name"><img src="/java.png"/><p>Java</p></div>
+                                <div className="skill_name"><img src="/images/java.png"/><p>Java</p></div>
                                 <p className="content">⁚ 로그인과 회원가입을 위한 컨트롤러와 DTO, DAO를 작성해 본 적 있습니다.</p>
                             </div>
                             <div className="skill">
-                                <div className="skill_name"><img src="/jsp.png"/><p>JSP</p></div>
+                                <div className="skill_name"><img src="/images/jsp.png"/><p>JSP</p></div>
                                 <p className="content">⁚ MVC 패턴을 이용하여 게시판 CRUD를 구현해 본 적 있습니다.</p>
                             </div>
                             <div className="skill">
-                                <div className="skill_name"><img src="/spring.png"/><p>Spring</p></div>
+                                <div className="skill_name"><img src="/images/spring.png"/><p>Spring</p></div>
                                 <p className="content">⁚ 스프링 MVC를 이용하여 블로그를 구현해 봤습니다.</p>
                             </div>
                         </div>
                         <h3>Tools</h3>
                         <div className="tools">
                             <div className="skill">
-                                <div className="skill_name"><img src="/figma.png"/><p>figma</p></div>
+                                <div className="skill_name"><img src="/images/figma.png"/><p>figma</p></div>
                                 <p className="content">⁚ 간단한 디자인이 가능하며, 피그마를 이용하여 화면 설계서를 작성해 보았습니다.</p>
                             </div>
                             <div className="skill">
-                                <div className="skill_name"><img src="/notion.png"/><p>Notion</p></div>
+                                <div className="skill_name"><img src="/images/notion.png"/><p>Notion</p></div>
                                 <p className="content">⁚ 노션을 이용하여 일정관리 및 기록을 합니다.</p>
                             </div>
                             <div className="skill">
-                                <div className="skill_name"><img src="/intellij.png"/><p>IntelliJ</p></div>
+                                <div className="skill_name"><img src="/images/intellij.png"/><p>IntelliJ</p></div>
                                 <p className="content">⁚ IntelliJ 이용하여 프로젝트를 만들 수 있습니다.</p>
                             </div>
                             <div className="skill">
-                                <div className="skill_name"><img src="/vscode.png"/><p>VS Code</p></div>
+                                <div className="skill_name"><img src="/images/vscode.png"/><p>VS Code</p></div>
                                 <p className="content">⁚ VS Code를 이용하여 프로젝트를 만들 수 있습니다.</p>
                             </div>
                         </div>
                         <div className="tools">
                             <div className="skill">
-                                <div className="skill_name"><img src="/dbever.png"/><p>DBever</p></div>
+                                <div className="skill_name"><img src="/images/dbever.png"/><p>DBever</p></div>
                                 <p className="content">⁚ DBever를 이용하여 데이터베이스를 관리를 할 수 있습니다. </p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div ref={projectsRef} id="sec3" className={showProjects ? 'show' : ''}>
+                </Section2>
+                <Section3 ref={projectsRef} id="sec3" className={showProjects ? 'show' : ''}>
                     <h2>Project</h2>
                     <div className="project">
                         <div className="project1">
                             <div className="portImg">
                                 <video autoPlay loop muted className="videoSize">
-                                    <source src="/portfolio.mp4" type="video/mp4" />
+                                    <source src="/videos/portfolio.mp4" type="video/mp4" />
                                 </video>
                                 <p className="click"><a href="https://github.com/neulhappy/portfolio.git" target="_blank">더보기</a></p>
                             </div>
@@ -290,7 +296,7 @@ function App() {
                         <div className="project2">
                             <div className="portImg">
                                 <video autoPlay loop muted className="videoSize">
-                                    <source src="/bread.mp4" type="video/mp4" />
+                                    <source src="/videos/bread.mp4" type="video/mp4" />
                                 </video>
                                 <p className="click"><a href="https://github.com/neulhappy/breadGame.git" target="_blank">더보기</a></p>
                             </div>
@@ -308,7 +314,7 @@ function App() {
                         <div className="project3">
                             <div className="portImg">
                                 <video autoPlay loop muted className="videoSize">
-                                    <source src="/night-factory.mp4" type="video/mp4" />
+                                    <source src="/videos/night-factory.mp4" type="video/mp4" />
                                 </video>
                                 <p className="click"><a href="https://github.com/neulhappy/night-factory.git" target="_blank">더보기</a></p>
                             </div>
@@ -326,7 +332,7 @@ function App() {
                     <div className="project4">
                         <div className="portImg">
                             <video autoPlay loop muted className="videoSize">
-                                <source src="/superhero-landing.mp4" type="video/mp4" />
+                                <source src="/videos/superhero-landing.mp4" type="video/mp4" />
                             </video>
                             <p className="click"><a href="https://github.com/neulhappy/superhero-landing.git" target="_blank">더보기</a></p>
                         </div>
@@ -342,27 +348,27 @@ function App() {
                         </div>
                     </div>
                     </div>
-                </div>
-                <div ref={contactRef} id="sec4">
+                </Section3>
+                <Section4 ref={contactRef} id="sec4">
                     <ContactForm />
                     <ToastContainer />
-                </div>
+                </Section4>
             </div>
-        </main>
-
+        </main >
+        <Footer>
         <footer id="App_footer">
             <div id="inner">
                 <p>
                     Copyright 2024. 김하늘. All rights reserved.
                 </p>
                 <a href="https://github.com/neulhappy"  target="_blank">
-                    <img src="/github.png"/>
+                    <img src="/images/github.png"/>
                 </a>
             </div>
         </footer>
+        </Footer>
     </div>
     );
 }
-
 
 export default App;
