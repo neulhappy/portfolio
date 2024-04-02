@@ -11,23 +11,24 @@ const baseSectionStyles = `
 `;
 
 export const Section1 = styled.div`
-  height: 1300px;
-  margin-top: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 1800px;
   border-bottom: 1px solid white;
   position: relative;
+  width: 100%;
 
-  &.show {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-  }
-
+  
   .home {
-    top: 100px;
+    text-align: center;
+    top: 350px;
     position: absolute;
-    left: 220px;
+    left: 49%;
+    transform: translateX(-50%);
     font-size: 2.8rem;
-    height: 300px;
+    height: 500px;
     width: 700px;
     font-weight: 600;
     font-family: 'PyeongChangPeace-Bold', serif;
@@ -42,15 +43,15 @@ export const Section1 = styled.div`
   .img {
     margin-left: 190px;
     border-bottom: 1px solid white;
-    height: 180px;
+    height: 200px;
     padding-top: 700px;
     width: 1000px;
     position: relative;
   }
 
-  #me {
+  #meImg {
     position: absolute;
-    left: 0;
+    left: 550;
     bottom: 20px;
     width: 200px;
     height: 200px;
@@ -68,8 +69,6 @@ export const Section1 = styled.div`
     margin: 0;
   }
 
-  .name,
-  .birth,
   .phone,
   .email,
   .major {
@@ -84,11 +83,13 @@ export const Section1 = styled.div`
   .name {
     font-size: 1.3rem;
     padding: 10px 0 0 50px;
+    font-weight: bold;
   }
 
   .birth {
     font-size: 1.1rem;
     padding: 10px 0 0 50px;
+    font-weight: bold;
   }
 
   .intro {
@@ -108,6 +109,12 @@ export const Section1 = styled.div`
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     visibility: hidden;
     line-height: 2;
+    margin-top: 300px;
+  }
+  .Me.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
   }
 
   .txt span {

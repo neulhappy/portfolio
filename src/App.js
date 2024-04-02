@@ -123,25 +123,25 @@ function App() {
                     <div className="home">
                         <div className="event">
                             <Background>
-                            <div className="bg"></div>
-                            <div className="bg2"></div>
+                                <div className="bg"></div>
+                                <div className="bg2"></div>
                             </Background>
                             <Bubble>
-                            <div className="bubble1"></div>
-                            <div className="bubble2"></div>
-                            <div className="bubble3"></div>
-                            <div className="bubble4"></div>
-                            <div className="bubble5"></div>
-                            <div className="bubble6"></div>
-                            <div className="bubble7"></div>
-                            <div className="bubble8"></div>
-                            <div className="bubble9"></div>
-                            <div className="bubble10"></div>
-                            <div className="bubble11"></div>
-                            <div className="bubble12"></div>
-                            <div className="bubble13"></div>
-                            <div className="bubble14"></div>
-                            <div className="bubble15"></div>
+                                <div className="bubble1"></div>
+                                <div className="bubble2"></div>
+                                <div className="bubble3"></div>
+                                <div className="bubble4"></div>
+                                <div className="bubble5"></div>
+                                <div className="bubble6"></div>
+                                <div className="bubble7"></div>
+                                <div className="bubble8"></div>
+                                <div className="bubble9"></div>
+                                <div className="bubble10"></div>
+                                <div className="bubble11"></div>
+                                <div className="bubble12"></div>
+                                <div className="bubble13"></div>
+                                <div className="bubble14"></div>
+                                <div className="bubble15"></div>
                             </Bubble>
                         </div>
                         <Typewriter
@@ -158,7 +158,7 @@ function App() {
                     </div>
                     <div  className={`Me ${showMe ? 'show' : ''}`}>
                         <div className="img">
-                            <img id="me" src="/images/Me.jpg"/>
+                            <img id="meImg" src="/images/Me.jpg"/>
                             <div ref={aboutMeRef} className="profile">
                                 <h2>About Me</h2>
                                 <p className="name">김하늘</p>
@@ -356,16 +356,16 @@ function App() {
             </div>
         </main >
         <Footer>
-        <footer id="App_footer">
-            <div id="inner">
-                <p>
-                    Copyright 2024. 김하늘. All rights reserved.
-                </p>
-                <a href="https://github.com/neulhappy"  target="_blank">
-                    <img src="/images/github.png"/>
-                </a>
-            </div>
-        </footer>
+            <footer id="App_footer">
+                <div id="inner">
+                    <p>
+                        Copyright 2024. 김하늘. All rights reserved.
+                    </p>
+                    <a href="https://github.com/neulhappy"  target="_blank">
+                        <img src="/images/github.png"/>
+                    </a>
+                </div>
+            </footer>
         </Footer>
     </div>
     );

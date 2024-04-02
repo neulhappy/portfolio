@@ -3,6 +3,7 @@ import media from '../media';
 
 export const Footer= styled.footer `
   height: 100px;
+  text-align: center;
 
   img {
     width: 50px;

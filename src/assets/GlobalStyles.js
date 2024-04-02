@@ -14,6 +14,11 @@ export const GlobalStyles = createGlobalStyle`
     font-style: normal;
   }
   
+  .App {
+    position: relative;
+    margin: 0;
+  }
+  
   body, html {
     margin: 0;
     padding: 0;
@@ -27,7 +32,7 @@ export const GlobalStyles = createGlobalStyle`
     justify-content: center;
     min-height: 100vh;
   }
-
+  
   li {
     list-style: none;
     cursor: pointer;
@@ -42,6 +47,6 @@ export const GlobalStyles = createGlobalStyle`
   .Toastify__toast-container {
     left: 520px;
   }
-
+  
 `;
 
