@@ -2,12 +2,15 @@ import styled from 'styled-components';
 import media from '../media';
 
 const baseSectionStyles = `
+  display: flex;
   opacity: 0;
+  flex-direction: column;
   transform: translateY(20px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   visibility: hidden;
   align-items: center;
   margin: 0 auto;
+  justify-content: center;
 `;
 
 export const Section1 = styled.div`
@@ -16,11 +19,11 @@ export const Section1 = styled.div`
   align-items: center;
   justify-content: center;
   height: 1800px;
-  border-bottom: 1px solid white;
+  border-bottom: 1.5px solid #000000;
   position: relative;
   width: 100%;
 
-  
+
   .home {
     text-align: center;
     top: 350px;
@@ -42,7 +45,7 @@ export const Section1 = styled.div`
 
   .img {
     margin-left: 190px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #000000;
     height: 200px;
     padding-top: 700px;
     width: 1000px;
@@ -73,7 +76,7 @@ export const Section1 = styled.div`
   .email,
   .major {
     font-weight: bold;
-    background: white;
+    border: 1px solid #000000;
     border-radius: 5px;
     margin: 0;
     padding: 0 5px;
@@ -113,6 +116,7 @@ export const Section1 = styled.div`
     height: 500px;
     margin-top: -300px;
   }
+
   .Me.show {
     opacity: 1;
     transform: translateY(0);
@@ -148,10 +152,11 @@ export const Section1 = styled.div`
 `;
 
 export const Section2 = styled.div`
-  ${baseSectionStyles}
-  width: 1200px;
-  height: 1500px;
-  border-bottom: 1px solid white;
+  ${baseSectionStyles};
+  width: 100%;
+  height: 1350px;
+  border-bottom: 1px solid #000000;
+
 
   &.show {
     opacity: 1;
@@ -159,15 +164,21 @@ export const Section2 = styled.div`
     visibility: visible;
   }
 
+
+  Section2.div {
+    width: 1200px;
+  }
+
   h2 {
+    margin-left: -730px;
     text-align: left;
-    padding: 30px 0 0 190px;
+    margin-bottom: -30px;
     font-size: 2.5rem;
   }
 
   h3 {
     text-align: left;
-    padding: 0 0 0 190px;
+    padding-left: 50px;
     font-size: 1.6rem;
   }
 
@@ -180,7 +191,8 @@ export const Section2 = styled.div`
   .normal,
   .hard,
   .tools {
-    padding-left: 190px;
+    padding-left: 50px;
+    text-align: left;
   }
 
   .skill {
@@ -188,11 +200,12 @@ export const Section2 = styled.div`
   }
 
   .content {
-    margin : 2px 0 0 5px;
+    margin: 2px 0 0 5px;
   }
 
   .skill_name {
-    background-color: white;
+    background-color: #ffffff;
+    border: 1.5px solid black;
     margin: 0 0 10px 0;
     border-radius: 5px;
     display: flex;
@@ -225,15 +238,28 @@ export const Section2 = styled.div`
   `}
 
   ${media.mobile`
-    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+   
+  
+    p {
+     
+    }
+  
+  
   `}
 `;
 
 export const Section3 = styled.div`
-  ${baseSectionStyles}
-  width: 1200px;
-  height: 1300px;
-  border-bottom: 1px solid white;
+  ${baseSectionStyles};
+  width: 100%;
+  height: 1350px;
+  border-bottom: 1px solid #000000;
 
   &.show {
     opacity: 1;
@@ -242,16 +268,19 @@ export const Section3 = styled.div`
   }
 
   h2 {
+    margin-left: -660px;
     font-size: 2.3rem;
     text-align: left;
-    padding: 30px 0 50px 190px;
+    padding: 0 0 50px 0;
   }
 
   .project {
     display: flex;
     gap: 50px;
-    padding: 0 0 0 190px;
+
     flex-wrap: wrap;
+    width: calc((100% - 50px) / 2);
+    justify-content: center;
   }
 
   .project1,
@@ -260,11 +289,11 @@ export const Section3 = styled.div`
   .project4 {
     height: 450px;
     width: 350px;
-    background-color: white;
+    background-color: #ffffff;
     padding: 10px;
     border-radius: 10px;
     position: relative;
-    box-shadow: 5px 5px 10px 0px rgba(115, 115, 115, 0.3);
+    border: 1px solid black;
   }
 
   .project1:hover,
@@ -316,7 +345,7 @@ export const Section3 = styled.div`
   }
 
   video {
-    width: 340px;
+    width: 350px;
     height: 200px;
     object-fit: cover;
     transition: opacity 0.3s ease-in-out;
@@ -362,7 +391,36 @@ export const Section3 = styled.div`
   `}
 
   ${media.mobile`
-    padding: 0 10px;
+    font-size: 0.8rem;
+    margin-left: -20px;
+    height: 2200px;
+     margin: 0 auto;
+    
+    .project {
+      padding: 0 15px;
+    }
+    
+    h2 {
+      padding: 0;
+      text-align : center;
+      margin-left: -10px;
+    }
+    
+    .project1, .project2, .project3, .project4 {
+      width: calc(100% - 30px);
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    .portName > p:first-child {
+      font-size : 1rem;
+      padding-top : 5px;
+    }
+
+    
+    video {
+      width: 100%;
+    }
   `}
 `;
 
@@ -377,7 +435,7 @@ export const Section4 = styled.div`
     margin: 40px auto;
     padding: 20px;
     background: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -403,7 +461,7 @@ export const Section4 = styled.div`
   form input[type="email"],
   form textarea {
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1.5px solid black;
     border-radius: 4px;
     margin-bottom: 20px;
   }
@@ -417,20 +475,21 @@ export const Section4 = styled.div`
   form input:focus,
   textarea:focus {
     outline: none;
-    border: 2px solid #cac6ce;
+    border: 2px solid #000000;
+  }
 
   form button[type="submit"] {
     padding: 10px 20px;
-    background-color: #e3e5f6;
-    color: #fff;
-    border: none;
+    background-color: #ffffff;
+    border: 1px solid black;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
   }
 
   form button[type="submit"]:hover {
-    background-color: #c5cbf6;
+    background-color: #000000;
+    color: white;
   }
 
   form input[type="text"],
@@ -447,6 +506,7 @@ export const Section4 = styled.div`
   }
 
   ${media.desktop`
+   margin: 0 auto;
     width: 100%;
     height: auto;
   `}
@@ -457,5 +517,10 @@ export const Section4 = styled.div`
 
   ${media.mobile`
     padding: 0 10px;
+    
+    
+    h2 {
+      margin-left:-150px;
+    }
   `}
 `;

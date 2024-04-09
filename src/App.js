@@ -88,13 +88,13 @@ function App() {
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
-            if (scrollPosition > 700) setShowMe(true);
+            if (scrollPosition > 520) setShowMe(true);
             else setShowMe(false);
 
-            if (scrollPosition > 1250) setShowSkills(true);
+            if (scrollPosition > 1150) setShowSkills(true);
             else setShowSkills(false);
 
-            if (scrollPosition > 2900) setShowProjects(true);
+            if (scrollPosition > 2700) setShowProjects(true);
             else setShowProjects(false);
         };
 
@@ -290,7 +290,7 @@ function App() {
                                 <p>2024.03.20 ~ ing</p>
                                 <p>프론트앤드 취업을 위해 만든 포트폴리오입니다. typewriter-effect, 스크롤 이벤트를 사용하여 페이지를 꾸몄습니다.</p>
                                 <p>stack</p>
-                                <p>React, node.js, styled-component</p>
+                                <p>React, node.js, Styled-Component</p>
                             </div>
                         </div>
                         <div className="project2">
@@ -308,7 +308,7 @@ function App() {
                                 <p>2024.03.06 ~ 04.01</p>
                                 <p>간단한 빵 이름 맞추기 게임입니다. 사진을 보고 글자 수에 맞는 빵 이름을 입력하면 빵 이름이 나타나는 게임입니다.</p>
                                 <p>stack</p>
-                                <p>React, node.js, styled-component</p>
+                                <p>React, node.js, Styled-Component</p>
                             </div>
                         </div>
                         <div className="project3">
