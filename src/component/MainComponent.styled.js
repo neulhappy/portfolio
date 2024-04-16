@@ -258,7 +258,7 @@ export const Section2 = styled.div`
 export const Section3 = styled.div`
   ${baseSectionStyles};
   width: 100%;
-  height: 1350px;
+  height: 1700px;
   border-bottom: 1px solid #000000;
 
   &.show {
@@ -287,13 +287,23 @@ export const Section3 = styled.div`
   .project2,
   .project3,
   .project4 {
-    height: 450px;
-    width: 350px;
     background-color: #ffffff;
     padding: 10px;
     border-radius: 10px;
     position: relative;
     border: 1px solid black;
+  }
+
+  .project1,
+  .project2 {
+    height: 450px;
+    width: 350px;
+  }
+  
+  .project3,
+  .project4 {
+    width: 350px;
+    height: 725px;
   }
 
   .project1:hover,
@@ -318,16 +328,16 @@ export const Section3 = styled.div`
     font-size: 1.3rem;
   }
 
-  .portName > p:last-child {
+  .portName > p:last-child, .participation > p:nth-child(2) {
     padding-top: 11px;
   }
 
-  .portTxt {
+  .portTxt, .participation {
     text-align: left;
     padding: 0 10px;
   }
 
-  .portTxt > p:first-child {
+  .portTxt > p:first-child{
     margin-top: 7px;
   }
 
@@ -335,13 +345,23 @@ export const Section3 = styled.div`
     margin: -10px 0 20px 0;
   }
 
-  .portTxt > p:nth-child(3) {
+  .portTxt > p:nth-child(3), .participation > p:first-child {
     text-align: center;
     background-color: #dce0ec;
     height: 30px;
     width: 60px;
     border-radius: 30px;
     margin: -10px 0 -10px 0;
+  }
+  
+  .portTxt > p:last-child {
+    padding-bottom: 10px;
+  }
+
+  .participation > p:last-child {
+    font-size: 0.9rem;
+    white-space: normal;
+    word-break: keep-all;;
   }
 
   video {
