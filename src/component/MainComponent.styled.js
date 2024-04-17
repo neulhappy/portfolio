@@ -170,7 +170,7 @@ export const Section2 = styled.div`
   }
 
   h2 {
-    margin-left: -730px;
+    margin-left: -700px;
     text-align: left;
     margin-bottom: -30px;
     font-size: 2.5rem;
@@ -210,16 +210,24 @@ export const Section2 = styled.div`
     border-radius: 5px;
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 30px;
     width: 110px;
     padding-left: 5px;
+    justify-content: flex-start;
+    position: relative;
   }
-
+  
   img {
     width: 20px;
     height: 20px;
     object-fit: cover;
+    margin-right: auto;
+  }
+  
+  .skill_name p {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
   }
 
   p {
@@ -237,21 +245,15 @@ export const Section2 = styled.div`
     padding: 0 20px;
   `}
 
-  ${media.mobile`
+  :${media.mobile`
     display: flex;
-    flex-direction: column;
+    flex-direction column;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 0;
     margin: 0 auto;
-   
-  
-    p {
-     
-    }
-  
-  
+ 
   `}
 `;
 
@@ -378,7 +380,7 @@ export const Section3 = styled.div`
     padding: 5px 10px;
     border-radius: 15px;
     left: 41%;
-    top: 19%;
+    top: 80px;
     opacity: 0;
     visibility: hidden;
     transition: visibility 0s, opacity 0.5s linear;
